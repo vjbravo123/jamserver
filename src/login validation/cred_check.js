@@ -29,6 +29,16 @@ const cred_check = async (req, res) => {
                res.status(401).json({ value: false })
            }
        }
+     else if(req.params.collection==='datalogger') //this if block is for checking teachers credentials
+       { 
+
+           if (docCount > 0) {
+               res.status(200).json({ value: true })
+           }
+           else {
+               res.status(401).json({ value: false })
+           }
+       }
 
       else{  //for students cred
 

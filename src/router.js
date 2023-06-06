@@ -17,6 +17,7 @@ const attendance_dataprovider = require("./login validation/attendance_finder")
 
 Router.get('/',logger)
 Router.post('/login/:collection',cred_check);
+Router.post('/adminlogin/:collection',cred_check);
 Router.get('/api/documents/:db',queries );
 
 Router.post('/queryattendance/:db/:collection',queryattendance)
